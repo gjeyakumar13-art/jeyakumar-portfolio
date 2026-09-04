@@ -513,23 +513,7 @@
     0 25px 50px rgba(0,245,212,.15);
 }
 
-.project-image{
-    position:relative;
-    width:100%;
-    background:#111827;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
 
-.project-image img{
-    width:100%;
-    height:auto;
-    object-fit:contain;
-    object-position:center;
-    display:block;
-    transition:.5s;
-}
 
 .project-card:hover img{
     transform:scale(1.1);
@@ -997,7 +981,6 @@
     transform:translateY(-8px);
 }
 
-
 /* =========================================
    RESPONSIVE DESIGN
    Desktop | Laptop | Tablet | Mobile
@@ -1008,6 +991,187 @@
    LARGE LAPTOP & SMALL DESKTOP
    1024px and below
 ========================================= */
+
+/* =========================================
+   HERO PROFILE & FLOATING CARDS RESPONSIVE
+========================================= */
+
+/* Tablet */
+@media (max-width: 768px){
+
+    .hero-right{
+        width:100%;
+        position:relative;
+        display:flex;
+        justify-content:center;
+        margin-top:30px;
+        min-height:450px;
+    }
+
+    .image-box{
+        width:300px;
+        height:300px;
+    }
+
+    .card1{
+        top:0;
+        right:5%;
+    }
+
+    .card2{
+        bottom:70px;
+        left:5%;
+    }
+
+    .card3{
+        bottom:0;
+        right:50%;
+        transform:translateX(50%);
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px){
+
+    .hero-right{
+        position:relative;
+        width:100%;
+        min-height:520px;
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+        padding-top:20px;
+    }
+
+    .image-box{
+        width:240px;
+        height:240px;
+        position:relative;
+        z-index:1;
+    }
+
+
+    /* அனைத்து cards-க்கும் common style */
+
+    .experience-card{
+        position:absolute;
+        z-index:2;
+        padding:10px 14px;
+        animation:none;
+        text-align:center;
+    }
+
+    .experience-card h3{
+        font-size:16px;
+    }
+
+    .experience-card p{
+        font-size:10px;
+    }
+
+
+    /* Card 1 - Imageக்கு மேலே */
+
+    .card1{
+        top:0;
+        right:50%;
+        transform:translateX(50%);
+    }
+
+
+    /* Card 2 - Imageக்கு கீழே Left */
+
+    .card2{
+        top:310px;
+        bottom:auto;
+        left:5%;
+    }
+
+
+    /* Card 3 - Imageக்கு கீழே Right */
+
+    .card3{
+        top:310px;
+        bottom:auto;
+        right:5%;
+        transform:none;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px){
+
+    .hero-right{
+        min-height:500px;
+    }
+
+    .image-box{
+        width:220px;
+        height:220px;
+    }
+
+
+    .card1{
+        top:0;
+    }
+
+
+    .card2{
+        top:285px;
+        left:0;
+    }
+
+
+    .card3{
+        top:205px;
+        right:0;
+    }
+
+
+    .experience-card{
+        padding:8px 10px;
+    }
+
+    .experience-card h3{
+        font-size:14px;
+    }
+
+    .experience-card p{
+        font-size:9px;
+    }
+
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 360px){
+
+    .hero-right{
+        min-height:470px;
+    }
+
+    .image-box{
+        width:200px;
+        height:200px;
+    }
+
+    .card2{
+        top:260px;
+    }
+
+    .card3{
+        top:260px;
+    }
+
+    .experience-card h3{
+        font-size:12px;
+    }
+
+}
 
 @media (max-width: 1024px){
 
